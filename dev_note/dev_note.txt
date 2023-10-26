@@ -1,3 +1,5 @@
 2023/10/24 Initialize project, I gonna work hard on development from now on! 
 
-2023/10/25 Logo $ its style, Reproducting the style was challenging.
+2023/10/25 Logo & its style, Reproducting the style was challenging.
+
+2023/10/26 Header & Responsive Design & these styles, First Substantial Responsive Design, I'm still happy when I can.
