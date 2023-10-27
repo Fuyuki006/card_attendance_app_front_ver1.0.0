@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.scss";
+import MyPractice from "./components/pages/MyPractice";
+import Logo from "./components/molecules/Logo";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Logo />
+      {/* <h1>Reactの練習</h1>
+      <MyPractice
+        initialMessage="ボタンを押してください。"
+        clickedMessage="ボタンが押されました！"
+        buttonLabel="ボタン"
+      />
+      <MyPractice
+        initialMessage="スイッチを押して！"
+        clickedMessage="スイッチが押された！"
+        buttonLabel="スイッチ"
+      /> */}
     </div>
   );
 }
