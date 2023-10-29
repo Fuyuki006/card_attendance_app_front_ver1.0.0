@@ -3,3 +3,8 @@
 2023/10/25 Logo & its style, Reproducting the style was challenging.
 
 2023/10/26 Header & Responsive Design & these styles, First Substantial Responsive Design, I'm still happy when I can.
+
+2023/10/27 Main & Responsive Design & Content Board, I might have forcefully applied some CSS styles. Should I reapply the CSS styles?
+I have a lot of things I don't know.
+
+2023/10/29 Content Board style, I had been forcefully setting CSS styles, it's time to relearn. I'll create a new branch and redo the styling.
