@@ -1,6 +1,20 @@
 .Main {
     &-container {
+        position: relative;
+    }
+
+    &-image {
         position: absolute;
-        margin-top: 50%;
+        top: 5%; 
+        left: 40%; 
+    }
+    
+    &-contentBoard {
+        position: absolute;
+        width: 653.049px;
+        height: 273.473px;
+        flex-shrink: 0;
+        top: 10%; 
+        left: 41%; 
     }
 }

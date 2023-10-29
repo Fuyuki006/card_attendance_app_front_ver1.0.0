@@ -13,8 +13,10 @@ function App() {
       </MediaQuery>
       <MediaQuery query="(min-width: 768px)">
         {/* // iPadの横幅を分岐点にしている */}
-        <Header />
-        <Main />
+        <div className="App-allwrapper">
+          <Header />
+          <Main />
+        </div>
         <div>ここにPC向けの要素を書く</div>
       </MediaQuery>
       {/* <h1>Reactの練習</h1>
