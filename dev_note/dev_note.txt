@@ -6,3 +6,5 @@
 
 2023/10/27 Main & Responsive Design & Content Board, I might have forcefully applied some CSS styles. Should I reapply the CSS styles?
 I have a lot of things I don't know.
+
+2023/10/29 Content Board style, I had been forcefully setting CSS styles, it's time to relearn. I'll create a new branch and redo the styling.
