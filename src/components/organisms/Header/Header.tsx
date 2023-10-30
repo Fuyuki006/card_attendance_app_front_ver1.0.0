@@ -6,14 +6,16 @@ import AppTitle from "../../atoms/AppTitle/AppTitle";
 export default class Header extends React.Component {
   render() {
     return (
-      <header className="Header-container">
+      <header className="Header">
         <img
           src="./images/header-image.jpg"
           alt="HeaderImage"
           className="Header-image"
         />
-        <AppTitle appTitleText="出退札アプリ" />
-        <Logo />
+        <div className="Header-container">
+          <Logo />
+          <AppTitle appTitleText="出退札アプリ" />
+        </div>
       </header>
     );
   }
