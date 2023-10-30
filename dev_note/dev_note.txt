@@ -8,3 +8,5 @@
 I have a lot of things I don't know.
 
 2023/10/29 Content Board style, I had been forcefully setting CSS styles, it's time to relearn. I'll create a new branch and redo the styling.
+
+2023/10/30 update styles, I managed to make some CSS style adjustments for the Header, although it still feels a bit forced. 
