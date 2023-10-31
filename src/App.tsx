@@ -15,7 +15,7 @@ function App() {
         {/* // iPadの横幅を分岐点にしている */}
         <div className="App-allwrapper">
           <Header />
-          {/* <Main /> */}
+          <Main />
         </div>
         <div>ここにPC向けの要素を書く</div>
       </MediaQuery>

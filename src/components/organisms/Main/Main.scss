@@ -1,20 +1,8 @@
 .Main {
+    margin-top: 12px;
+    margin-bottom: 16px;
     &-container {
         position: relative;
-    }
-
-    &-image {
-        position: absolute;
-        top: 5%; 
-        left: 40%; 
-    }
-    
-    &-contentBoard {
-        position: absolute;
-        width: 653.049px;
-        height: 273.473px;
-        flex-shrink: 0;
-        top: 10%; 
-        left: 41%; 
+        display: inline-block;
     }
 }
