@@ -12,3 +12,7 @@ I have a lot of things I don't know.
 2023/10/30 update styles, I managed to make some CSS style adjustments for the Header, although it still feels a bit forced. 
 
 2023/10/31 update main style, I think I've been able to apply the style quite well for now. 
+
+2023/11/01 update styles and implement move pages, I've set up the page navigation for now, 
+so should I go ahead and create the next page? I'll also need to make some adjustments to the Index page, 
+but for now, let's focus on creating the next one.
