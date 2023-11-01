@@ -4,7 +4,6 @@
 	// top: 0;
 	// left: 0; 
 	// right: 0; 
-    
     &-container {
         display: flex;
         justify-content: center; 
@@ -12,7 +11,7 @@
         margin-right: auto;
         max-width: 850px;
         width: 100%;
-        position: fixed; 
+        position: absolute;
         top: 0;
         left: 0; 
         right: 0;

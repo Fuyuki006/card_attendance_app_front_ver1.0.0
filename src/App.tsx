@@ -1,24 +1,17 @@
 import React from "react";
 import "./App.scss";
-import Header from "./components/organisms/Header/Header";
-import MediaQuery from "react-responsive";
-import Main from "./components/organisms/Main/Main";
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Index from "./components/pages/Index";
+import TagWall from "./components/pages/TagWall";
 function App() {
   return (
     <div className="App">
-      <MediaQuery query="(max-width: 767px)">
-        {/* // iPadの横幅を分岐点にしている */}
-        <div>ここにスマートフォン向けの要素を書く</div>
-      </MediaQuery>
-      <MediaQuery query="(min-width: 768px)">
-        {/* // iPadの横幅を分岐点にしている */}
-        <div className="App-allwrapper">
-          <Header />
-          <Main />
-        </div>
-        <div>ここにPC向けの要素を書く</div>
-      </MediaQuery>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/tagwall" element={<TagWall />} />
+        </Routes>
+      </BrowserRouter>
       {/* <h1>Reactの練習</h1>
       <MyPractice
         initialMessage="ボタンを押してください。"
