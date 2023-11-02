@@ -1,0 +1,27 @@
+.BoardDescription {
+    &-highlight-text {
+        color: #D62B2B;
+        text-align: center;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &-normal-text {
+        color: #000;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        
+    }
+
+    &-container {
+        margin: 0 8px;
+    }
+
+      
+
+}

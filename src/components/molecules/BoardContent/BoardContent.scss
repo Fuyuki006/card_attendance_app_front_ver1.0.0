@@ -7,4 +7,10 @@
         height: 100%;
         background-color: rgba(237, 155, 32, 0.20);
     }
+
+    &-description {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
