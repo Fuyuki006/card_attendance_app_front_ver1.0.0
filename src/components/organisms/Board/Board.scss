@@ -1,0 +1,9 @@
+.Board {
+    margin-top: 12px;
+    margin-bottom: 16px;
+    &-container {
+        margin: auto;
+        position: relative;
+        display: inline-block;
+    }
+}

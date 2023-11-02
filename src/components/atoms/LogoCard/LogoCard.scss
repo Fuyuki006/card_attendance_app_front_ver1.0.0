@@ -2,14 +2,17 @@
 .LogoCard {
     &-container {
         position: absolute;
-        width: 196px;
-        height: 95px;
-        top: -30px;
+        width: 65px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 100px;
     }
 
     &-firstLetter {
         position: relative;
-        margin: 12.6px 130.7px 26px 0px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 12.6px 0px 26px 0px;
         width: 65px;
         height: 56px;
         flex-shrink: 0;
@@ -19,6 +22,8 @@
 
     &-secondLetter {
         position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
         margin: 38.6px 65.3px 0px 65.3px;
         top: 24px;
         width: 65px;
@@ -30,6 +35,8 @@
 
     &-thirdLetter {
         position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
         margin: 13px 0px 25.6px 130.6px;
         width: 65px;
         height: 56px;
