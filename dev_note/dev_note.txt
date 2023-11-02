@@ -16,3 +16,5 @@ I have a lot of things I don't know.
 2023/11/01 update styles and implement move pages, I've set up the page navigation for now, 
 so should I go ahead and create the next page? I'll also need to make some adjustments to the Index page, 
 but for now, let's focus on creating the next one.
+
+2023/11/01 implementation-board-contents, How can I apply different styles to a single element(such as text) in SCSS while using components? It's difficult.
