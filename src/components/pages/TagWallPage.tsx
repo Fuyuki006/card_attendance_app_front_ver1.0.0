@@ -1,10 +1,8 @@
 import React from "react";
-import Main from "../organisms/Main/Main";
-import Header from "../organisms/Header/Header";
 import MediaQuery from "react-responsive";
-import Footer from "../organisms/Footer/Footer";
+import Header from "../organisms/Header/TagWallPage/Header";
 
-export default class Index extends React.Component {
+export default class TagWall extends React.Component {
   render() {
     return (
       <div className="Index">
@@ -14,12 +12,9 @@ export default class Index extends React.Component {
         </MediaQuery>
         <MediaQuery query="(min-width: 768px)">
           {/* // iPadの横幅を分岐点にしている */}
-          <div className="App-allwrapper">
-            <Header />
-            <Main />
-            <Footer />
-          </div>
-          {/* <div>ここにPC向けの要素を書く</div> */}
+          <div className="App-allwrapper"></div>
+          <Header />
+          <div>ここにPC向けの要素を書く</div>
         </MediaQuery>
       </div>
     );

@@ -1,15 +1,16 @@
 import React from "react";
 import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Index from "./components/pages/Index";
-import TagWall from "./components/pages/TagWall";
+import IndexPage from "./components/pages/IndexPage";
+import TagWallPage from "./components/pages/TagWallPage";
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/tagwall" element={<TagWall />} />
+          <Route path="/" element={<IndexPage />} />
+          <Route path="/tagwall" element={<TagWallPage />} />
         </Routes>
       </BrowserRouter>
       {/* <h1>Reactの練習</h1>
