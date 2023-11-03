@@ -3,7 +3,7 @@
         color: #D62B2B;
         text-align: center;
         font-family: 'Noto Sans JP', sans-serif;
-        font-size: 32px;
+        font-size: 40px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
@@ -11,15 +11,17 @@
     &-normal-text {
         color: #000;
         font-family: 'Noto Sans JP', sans-serif;
-        font-size: 32px;
+        font-size: 40px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        margin: 0 8px;
         
     }
 
     &-container {
-        margin: 0 8px;
+        margin: 15px 0px;
+
     }
 
       

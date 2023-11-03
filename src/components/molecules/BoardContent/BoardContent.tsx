@@ -7,30 +7,11 @@ import "./BoardContent.scss";
 interface BoardContentTitleProps {
   BoardTitleBoldText: string;
   BoardTitleText: string;
-  BoardDescriptionText: Array<string>;
-  Highlights: Array<string>;
+  BoardDescriptionText: string;
+  Highlights: string;
 }
 
 export default class BoardContent extends React.Component<BoardContentTitleProps> {
-  BoardDescriptionArray = this.props.BoardDescriptionText.map(
-    (element, index) => {
-      const splitTextElement = element.split("-");
-      const splitHighlightElement = this.props.Highlights[index].split("-");
-      const boardDescription = splitTextElement.map((element, index) => {
-        return (
-          <span key={element}>
-            <BoardDescription
-              BoardDescriptionText={element}
-              Highlight={splitHighlightElement[index]}
-            />
-          </span>
-        );
-      });
-
-      return boardDescription;
-    }
-  );
-
   render() {
     return (
       <div className="BoardContent-container">
@@ -41,7 +22,12 @@ export default class BoardContent extends React.Component<BoardContentTitleProps
           />
         </div>
         <div className="BoardContent-description">
-          {this.BoardDescriptionArray}
+          <span>
+            <BoardDescription
+              BoardDescriptionText={this.props.BoardDescriptionText}
+              Highlight={this.props.Highlights}
+            />
+          </span>
         </div>
       </div>
     );

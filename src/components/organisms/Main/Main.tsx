@@ -7,9 +7,9 @@ const boardTitleBoldTextArray = ["出退札", "出退札アプリ"];
 const boardTitleTextArray = ["とは", "とは"];
 const boardDescriptionText = [
   "出退-勤を管理するための-名札",
-  "出退-勤を管理するための-名札",
+  "出退札-を使った-勤怠管理-アプリ!",
 ];
-const highlights = ["true-false-true", "true-false-true"];
+const highlights = ["true-false-true", "true-false-true-false"];
 
 const boardContainer = boardTitleBoldTextArray.map((element, index) => {
   return (
@@ -17,8 +17,8 @@ const boardContainer = boardTitleBoldTextArray.map((element, index) => {
       <Board
         BoardTitleBoldText={element}
         BoardTitleText={boardTitleTextArray[index]}
-        BoardDescriptionText={boardDescriptionText}
-        Highlights={highlights}
+        BoardDescriptionText={boardDescriptionText[index]}
+        Highlights={highlights[index]}
       />
     </div>
   );

@@ -5,30 +5,11 @@ import "./Board.scss";
 interface BoardProps {
   BoardTitleBoldText: string;
   BoardTitleText: string;
-  BoardDescriptionText: Array<string>;
-  Highlights: Array<string>;
+  BoardDescriptionText: string;
+  Highlights: string;
 }
 
 export default class Board extends React.Component<BoardProps> {
-  BoardDescriptionArray = this.props.BoardDescriptionText.map(
-    (element, index) => {
-      const splitTextElement = element.split("-");
-      const splitHighlightElement = this.props.Highlights[index].split("-");
-      const boardDescription = splitTextElement.map((element, index) => {
-        return (
-          <BoardContent
-            BoardTitleBoldText={this.props.BoardTitleBoldText}
-            BoardTitleText={this.props.BoardTitleText}
-            BoardDescriptionText={splitHighlightElement}
-            Highlights={this.props.Highlights}
-          />
-        );
-      });
-
-      return boardDescription;
-    }
-  );
-
   render() {
     return (
       <div className="Board">
