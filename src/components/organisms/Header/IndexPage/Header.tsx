@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.scss";
-import Logo from "../../molecules/Logo/Logo";
-import AppTitle from "../../atoms/AppTitle/AppTitle";
+import Logo from "../../../molecules/Logo/Logo";
+import AppTitle from "../../../atoms/AppTitle/AppTitle";
 
 export default class Header extends React.Component {
   render() {

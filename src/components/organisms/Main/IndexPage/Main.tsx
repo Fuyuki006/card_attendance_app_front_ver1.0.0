@@ -1,5 +1,5 @@
 import React from "react";
-import Board from "../Board/Board";
+import Board from "../../Board/Board";
 import "./Main.scss";
 import { Link } from "react-router-dom";
 
