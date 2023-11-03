@@ -5,6 +5,8 @@ import "./Board.scss";
 interface BoardProps {
   BoardTitleBoldText: string;
   BoardTitleText: string;
+  BoardDescriptionText: string;
+  Highlights: string;
 }
 
 export default class Board extends React.Component<BoardProps> {
@@ -20,6 +22,8 @@ export default class Board extends React.Component<BoardProps> {
           <BoardContent
             BoardTitleBoldText={this.props.BoardTitleBoldText}
             BoardTitleText={this.props.BoardTitleText}
+            BoardDescriptionText={this.props.BoardDescriptionText}
+            Highlights={this.props.Highlights}
           />
         </div>
       </div>
