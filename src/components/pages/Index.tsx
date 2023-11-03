@@ -2,6 +2,7 @@ import React from "react";
 import Main from "../organisms/Main/Main";
 import Header from "../organisms/Header/Header";
 import MediaQuery from "react-responsive";
+import Footer from "../organisms/Footer/Footer";
 
 export default class Index extends React.Component {
   render() {
@@ -16,8 +17,9 @@ export default class Index extends React.Component {
           <div className="App-allwrapper">
             <Header />
             <Main />
+            <Footer />
           </div>
-          <div>ここにPC向けの要素を書く</div>
+          {/* <div>ここにPC向けの要素を書く</div> */}
         </MediaQuery>
       </div>
     );
