@@ -13,7 +13,7 @@ const highlights = ["true-false-true", "true-false-true-false"];
 
 const boardContainer = boardTitleBoldTextArray.map((element, index) => {
   return (
-    <div key={element} className="Main-board-container">
+    <div key={index} className="Main-board-container">
       <Board
         BoardTitleBoldText={element}
         BoardTitleText={boardTitleTextArray[index]}
