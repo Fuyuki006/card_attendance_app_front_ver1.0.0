@@ -21,3 +21,6 @@ but for now, let's focus on creating the next one.
 
 2023/11/03 implementation-board-contents and organizing-folder-structure, I need to rethink the style of the Index page. I think there are many things
 I don't know technically. I want to create a TagWall page and get to the DB part as soon as possible. It seems like it will take some time.
+
+2023/11/04 implementation-tagwall-page and redux, In parallel with implementating the TagWall page, I introduced Redux. I'm not sure if using 
+Redux for state management is the right choice. or rather, it's a bit challenging. For now, let's give it a try with Redux.
