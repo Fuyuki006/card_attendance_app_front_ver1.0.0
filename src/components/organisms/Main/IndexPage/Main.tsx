@@ -1,6 +1,6 @@
 import React from "react";
 import Board from "../../Board/Board";
-import "./Main.scss";
+import "../Main.scss";
 import { Link } from "react-router-dom";
 
 const boardTitleBoldTextArray = ["出退札", "出退札アプリ"];
@@ -13,7 +13,7 @@ const highlights = ["true-false-true", "true-false-true-false"];
 
 const boardContainer = boardTitleBoldTextArray.map((element, index) => {
   return (
-    <div key={index} className="Main-board-container">
+    <div key={element.toString()} className="Main-index-board-container">
       <Board
         BoardTitleBoldText={element}
         BoardTitleText={boardTitleTextArray[index]}
@@ -27,7 +27,7 @@ const boardContainer = boardTitleBoldTextArray.map((element, index) => {
 export default class Main extends React.Component {
   render() {
     return (
-      <main className="Main">
+      <main className="Main-index">
         {boardContainer}
         <div>
           <Link to="/tagwall">使ってみる</Link>

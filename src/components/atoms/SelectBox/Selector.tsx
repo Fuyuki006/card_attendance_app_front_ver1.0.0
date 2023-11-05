@@ -26,7 +26,7 @@ function Selector({ initialVal, selectRange, updateStateFunc }: SelectorProps) {
     >
       {selectRange.map((data, index) => {
         return (
-          <option key={index} value={data}>
+          <option key={data.toString()} value={data}>
             {data}
           </option>
         );
