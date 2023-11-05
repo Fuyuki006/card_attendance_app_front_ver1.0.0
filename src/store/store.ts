@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import selectedValueReducer from "./features/selectedValueSlice";
+import tagWallSliceReducer from "./features/TagWallSlice";
 import { TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
 
 export const store = configureStore({
     reducer: {
-        selected : selectedValueReducer,
+        tagWallValue : tagWallSliceReducer,
     },
 });
 

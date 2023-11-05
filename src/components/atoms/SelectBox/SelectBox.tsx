@@ -1,8 +1,10 @@
 import React from "react";
+import Selector from "./Selector";
 
 interface SelectBoxProps {
   minRangeNum: number;
   maxRangeNum: number;
+  updateStateFunc: Function;
 }
 
 interface SelectBoxState {
@@ -33,22 +35,11 @@ export default class SelectBox extends React.Component<
 
   render() {
     return (
-      <select
-        name=""
-        id=""
-        value={this.state.value}
-        onChange={(e) => {
-          this.onChange(parseInt(e.target.value));
-        }}
-      >
-        {this.options.map((data, index) => {
-          return (
-            <option key={index} value={data}>
-              {data}
-            </option>
-          );
-        })}
-      </select>
+      <Selector
+        initialVal={this.props.minRangeNum}
+        selectRange={this.options}
+        updateStateFunc={this.props.updateStateFunc}
+      />
     );
   }
 }

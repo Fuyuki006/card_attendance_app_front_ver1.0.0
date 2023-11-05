@@ -4,6 +4,7 @@ interface SelectTableProps {
   minRangeNum: number;
   maxRangeNum: number;
   contentName: string;
+  updateStateFunc: Function;
 }
 
 export default class SelectTable extends React.Component<SelectTableProps> {
@@ -16,6 +17,7 @@ export default class SelectTable extends React.Component<SelectTableProps> {
         <SelectBox
           minRangeNum={this.props.minRangeNum}
           maxRangeNum={this.props.maxRangeNum}
+          updateStateFunc={this.props.updateStateFunc}
         />
       </div>
     );
