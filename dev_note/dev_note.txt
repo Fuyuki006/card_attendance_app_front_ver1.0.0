@@ -24,3 +24,6 @@ I don't know technically. I want to create a TagWall page and get to the DB part
 
 2023/11/04 implementation-tagwall-page and redux, In parallel with implementating the TagWall page, I introduced Redux. I'm not sure if using 
 Redux for state management is the right choice. or rather, it's a bit challenging. For now, let's give it a try with Redux.
+
+2023/11/05 implementation-tag-and-gridlayout-using-statevalue, Presenting the TagWall section might require some creativity because, when dealing with tags,
+it tends to become vertically long.
