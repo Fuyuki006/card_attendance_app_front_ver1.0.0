@@ -27,3 +27,6 @@ Redux for state management is the right choice. or rather, it's a bit challengin
 
 2023/11/05 implementation-tag-and-gridlayout-using-statevalue, Presenting the TagWall section might require some creativity because, when dealing with tags,
 it tends to become vertically long.
+
+2023/11/06 implementation-tagwall-header-style-and-registration-button, I'll start creating a modal for registering names. I'm undecided whether
+to use an XLSX file or a CSV file when loading data. It looks like I'll need to do some research before deciding.
