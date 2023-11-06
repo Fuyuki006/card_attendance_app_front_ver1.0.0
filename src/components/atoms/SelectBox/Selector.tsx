@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useAppDispatch } from "../../../store/store";
+import "./Selector.scss";
 
 interface SelectorProps {
   initialVal: number;
@@ -23,10 +24,15 @@ function Selector({ initialVal, selectRange, updateStateFunc }: SelectorProps) {
       onChange={(e) => {
         handleSelect(Number(e.target.value));
       }}
+      className="Selector-select"
     >
       {selectRange.map((data, index) => {
         return (
-          <option key={data.toString()} value={data}>
+          <option
+            key={data.toString()}
+            value={data}
+            className="Selector-option"
+          >
             {data}
           </option>
         );

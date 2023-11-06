@@ -1,5 +1,7 @@
 import React from "react";
 import SelectBox from "../../atoms/SelectBox/SelectBox";
+import "./SelectTable.scss";
+
 interface SelectTableProps {
   minRangeNum: number;
   maxRangeNum: number;

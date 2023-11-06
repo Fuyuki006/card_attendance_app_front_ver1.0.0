@@ -9,17 +9,26 @@ export default class Header extends React.Component {
     return (
       <header className="Header-tagwall">
         <SelectTable
-          contentName="縦"
+          contentName="縦:"
           minRangeNum={0}
-          maxRangeNum={8}
+          maxRangeNum={4}
           updateStateFunc={updateRow}
         />
         <SelectTable
-          contentName="横"
+          contentName="横:"
           minRangeNum={0}
-          maxRangeNum={8}
+          maxRangeNum={20}
           updateStateFunc={updateColumn}
         />
+        <nav className="Header-tagwall-registration-container">
+          <button className="Header-tagwall-registration-button">
+            <img
+              src="./images/registration.png"
+              alt="RegistrationImage"
+              className="Header-tagwall-image"
+            />
+          </button>
+        </nav>
       </header>
     );
   }
