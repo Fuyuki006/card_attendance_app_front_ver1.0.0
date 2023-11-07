@@ -12,6 +12,24 @@ interface HeaderProps {}
 interface HeaderState {
   modal: boolean;
 }
+const customModalStyles = {
+  content: {
+    width: "886px",
+    height: "453px",
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    overflow: "hidden",
+  },
+  overlay: {
+    top: 0,
+    left: 0,
+    backgroundColor: "rgba(0,0,0,0.60)",
+  },
+};
 
 export default class Header extends React.Component<HeaderProps, HeaderState> {
   constructor(props: HeaderProps) {
@@ -45,10 +63,14 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
         />
         <nav className="Header-tagwall-registration-container">
           <MemberRegistrationButton onClick={this.openModal} />
-          <Modal isOpen={this.state.modal} ariaHideApp={false}>
-            <MemberRegistrationModal />
-          </Modal>
         </nav>
+        <Modal
+          isOpen={this.state.modal}
+          ariaHideApp={false}
+          style={customModalStyles}
+        >
+          <MemberRegistrationModal />
+        </Modal>
       </header>
     );
   }
