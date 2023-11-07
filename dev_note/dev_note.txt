@@ -30,3 +30,6 @@ it tends to become vertically long.
 
 2023/11/06 implementation-tagwall-header-style-and-registration-button, I'll start creating a modal for registering names. I'm undecided whether
 to use an XLSX file or a CSV file when loading data. It looks like I'll need to do some research before deciding.
+
+2023/11/07 implementation-member-registration-modal, I feel like the usage of "state" is not very clean because I'm using "constructor"
+ and "useState" separately. Instead of exporting a class, I should have initially exported a function. For now, I'll create a modal.
