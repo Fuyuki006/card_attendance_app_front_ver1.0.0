@@ -9,17 +9,18 @@ interface BoardDescriptionProps {
 
 export default class BoardDescription extends React.Component<BoardDescriptionProps> {
   highlight = this.props.Highlight.split("-");
-  boardDescriptionText = this.props.BoardDescriptionText.split("-");
-  a: any = this.highlight.map((element, index) => {
+  boardDescriptionSplitedText = this.props.BoardDescriptionText.split("-");
+  boardDescription = this.highlight.map((element, index) => {
     return (
       <span
+        key={element.toString()}
         className={classNames(
           element === "true"
             ? "BoardDescription-highlight-text"
             : "BoardDescription-normal-text"
         )}
       >
-        {this.boardDescriptionText[index]}
+        {this.boardDescriptionSplitedText[index]}
       </span>
     );
   });
@@ -34,7 +35,7 @@ export default class BoardDescription extends React.Component<BoardDescriptionPr
               : "BoardDescription-normal-text"
           )}
         >
-          {this.a}
+          {this.boardDescription}
         </span>
       </div>
     );

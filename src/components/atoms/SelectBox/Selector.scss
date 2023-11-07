@@ -1,0 +1,14 @@
+.Selector {
+    &-select {
+        width: 90px;
+        height: 62px;
+        flex-shrink: 0;
+        border: 1px solid;
+        font-size: 40px;
+    }
+
+    &-option {
+        text-align: center;
+        
+    }
+}
