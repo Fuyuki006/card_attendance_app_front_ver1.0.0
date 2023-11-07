@@ -27,12 +27,6 @@ export default class SelectBox extends React.Component<
     (_, index) => this.props.minRangeNum + index
   );
 
-  onChange(value: number) {
-    this.setState({
-      value: value,
-    });
-  }
-
   render() {
     return (
       <Selector

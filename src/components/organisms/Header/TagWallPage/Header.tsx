@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Header.scss";
 import SelectTable from "../../../molecules/SelectTable/SelectTable";
 import { updateRow } from "../../../../store/features/TagWallSlice";
 import { updateColumn } from "../../../../store/features/TagWallSlice";
+import MemberRegistrationButton from "../../../atoms/MemberRegistrationButton/MemberRegistrationButton";
+import Modal from "react-modal";
+import MemberRegistrationModal from "../../../molecules/MemberRegistrationModal/MemberRegistrationModal";
 
-export default class Header extends React.Component {
+interface HeaderProps {}
+
+interface HeaderState {
+  modal: boolean;
+}
+
+export default class Header extends React.Component<HeaderProps, HeaderState> {
+  constructor(props: HeaderProps) {
+    super(props);
+
+    this.state = {
+      modal: false,
+    };
+    this.openModal = this.openModal.bind(this);
+  }
+
+  openModal() {
+    this.setState({
+      modal: true,
+    });
+  }
   render() {
     return (
       <header className="Header-tagwall">
@@ -21,13 +44,10 @@ export default class Header extends React.Component {
           updateStateFunc={updateColumn}
         />
         <nav className="Header-tagwall-registration-container">
-          <button className="Header-tagwall-registration-button">
-            <img
-              src="./images/registration.png"
-              alt="RegistrationImage"
-              className="Header-tagwall-image"
-            />
-          </button>
+          <MemberRegistrationButton onClick={this.openModal} />
+          <Modal isOpen={this.state.modal} ariaHideApp={false}>
+            <MemberRegistrationModal />
+          </Modal>
         </nav>
       </header>
     );
