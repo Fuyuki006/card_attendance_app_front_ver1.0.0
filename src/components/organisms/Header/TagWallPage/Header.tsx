@@ -23,6 +23,7 @@ const customModalStyles = {
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     overflow: "hidden",
+    borderRadius: "30px",
   },
   overlay: {
     top: 0,
@@ -39,6 +40,7 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
       modal: false,
     };
     this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   openModal() {
@@ -46,6 +48,13 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
       modal: true,
     });
   }
+
+  closeModal() {
+    this.setState({
+      modal: false,
+    });
+  }
+
   render() {
     return (
       <header className="Header-tagwall">
@@ -68,8 +77,9 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           isOpen={this.state.modal}
           ariaHideApp={false}
           style={customModalStyles}
+          onRequestClose={() => this.closeModal()}
         >
-          <MemberRegistrationModal />
+          <MemberRegistrationModal onClick={this.closeModal} />
         </Modal>
       </header>
     );

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { ReactEventHandler } from "react";
 import "./MemberCSVButton.scss";
 
-export default class MemberCSVButton extends React.Component {
+interface MemberCSVButtonProps {
+  onClick: ReactEventHandler;
+}
+
+export default class MemberCSVButton extends React.Component<MemberCSVButtonProps> {
   render() {
     return (
-      <button className="MemberCSVButton-button">
+      <button onClick={this.props.onClick} className="MemberCSVButton-button">
         <img
           src="./images/member-registration-csv.png"
           alt="MemberRegistrationCSVImage"

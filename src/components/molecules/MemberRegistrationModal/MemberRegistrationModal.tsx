@@ -1,20 +1,24 @@
-import React from "react";
+import React, { ReactEventHandler } from "react";
 import MemberManualButton from "../../atoms/MemberManualButton/MemberManualButton";
 import MemberCSVButton from "../../atoms/MemberCSVButton/MemberCSVButton";
 import "./MemberRegistrationModal.scss";
 
-export default class MemberRegistrationModal extends React.Component {
+interface MemberRegistrationModalProps {
+  onClick: ReactEventHandler;
+}
+
+export default class MemberRegistrationModal extends React.Component<MemberRegistrationModalProps> {
   render() {
     return (
       <div className="MemberRegistrationModal-container">
         <div className="MemberRegistrationModal-manualButton-container">
-          <MemberManualButton />
+          <MemberManualButton onClick={this.props.onClick} />
           <div className="MemberRegistrationModal-manualText">
             手動で<br></br>追加
           </div>
         </div>
         <div className="MemberRegistrationModal-csvButton-container">
-          <MemberCSVButton />
+          <MemberCSVButton onClick={this.props.onClick} />
           <div className="MemberRegistrationModal-csvText">
             CSV ファイルで追加
           </div>
