@@ -33,3 +33,5 @@ to use an XLSX file or a CSV file when loading data. It looks like I'll need to 
 
 2023/11/07 implementation-member-registration-modal, I feel like the usage of "state" is not very clean because I'm using "constructor"
  and "useState" separately. Instead of exporting a class, I should have initially exported a function. For now, I'll create a modal.
+
+ 2023/11/08 implementation-member-registration-modal, Is member addition feature really necessary? I think about UX again.
