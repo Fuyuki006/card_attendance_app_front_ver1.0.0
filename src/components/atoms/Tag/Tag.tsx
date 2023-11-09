@@ -1,5 +1,6 @@
 import React from "react";
 import "./Tag.scss";
+import InputBox from "../InputBox/InputBox";
 
 interface TagProps {
   tagText: string;
@@ -14,7 +15,8 @@ export default class Tag extends React.Component<TagProps> {
     return (
       <span className="Tag-container">
         <img src="./images/tag.png" alt="TagImage" className="Tag-image" />
-        <span className="Tag-text">{tagText}</span>
+        {/* <span className="Tag-text">{tagText}</span> */}
+        <InputBox initialText="" />
       </span>
     );
   }

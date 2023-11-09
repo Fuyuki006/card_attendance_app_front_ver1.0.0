@@ -32,6 +32,7 @@ export default class InputBox extends React.Component<
         type="text"
         value={this.state.value}
         onChange={(event) => this.onChange(event.target.value)}
+        draggable="true"
       />
     );
   }
