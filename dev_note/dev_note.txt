@@ -38,3 +38,6 @@ to use an XLSX file or a CSV file when loading data. It looks like I'll need to 
 
 2023/11/09 change-tag-text-to-inputbox, In the section where I name the tags, I tried switching between Tag Text Edit Mode and Attendance
  Mode for handling input. Is there any creative way to register names ?
+
+2023/11/10 implementation-accordion-button, I made a provisional implementation of a accordion(foldable) button to manually input roster 
+data. Spent the whole day on FIgma. Any good ideas for roster registration ?
