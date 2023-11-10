@@ -24,7 +24,7 @@ export default class TagWall extends React.Component<TagWallProps> {
             tagWallRowValue={this.props.tagWallRowValue}
             tagWallColumnValue={this.props.tagWallColumnValue}
           />
-          <div>ここにPC向けの要素を書く</div>
+          {/* <div>ここにPC向けの要素を書く</div> */}
         </MediaQuery>
       </div>
     );

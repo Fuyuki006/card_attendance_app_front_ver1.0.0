@@ -10,7 +10,7 @@ export default class Index extends React.Component {
       <div className="Index">
         <MediaQuery query="(max-width: 767px)">
           {/* // iPadの横幅を分岐点にしている */}
-          <div>ここにスマートフォン向けの要素を書く</div>
+          {/* <div>ここにスマートフォン向けの要素を書く</div> */}
         </MediaQuery>
         <MediaQuery query="(min-width: 768px)">
           {/* // iPadの横幅を分岐点にしている */}

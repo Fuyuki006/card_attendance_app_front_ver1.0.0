@@ -1,0 +1,43 @@
+.MemberRegistrationModal {
+    &-container {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &-manualButton-container {
+        text-align: center;
+    }
+
+    &-csvButton-container {
+        text-align: center;
+    }
+
+    &-manualText {
+        width: 343px;
+        height: 83px;
+        flex-shrink: 0;
+        color: rgba(209, 71, 71, 0.54);
+        text-align: center;
+        font-family: "Inter";
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+    }
+
+    &-csvText {
+        width: 343px;
+        height: 83px;
+        flex-shrink: 0;
+        color: rgba(209, 71, 71, 0.54);
+        text-align: center;
+        font-family: "Inter";
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+    }
+}
