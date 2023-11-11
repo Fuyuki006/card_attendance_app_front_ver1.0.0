@@ -2,7 +2,7 @@ import React from "react";
 import "./InputBox.scss";
 
 interface InputBoxProps {
-  initialText: string;
+  className: string;
 }
 
 interface InputBoxState {
@@ -17,7 +17,7 @@ export default class InputBox extends React.Component<
     super(props);
 
     this.state = {
-      value: this.props.initialText,
+      value: "",
     };
   }
 
@@ -28,14 +28,12 @@ export default class InputBox extends React.Component<
   }
   render() {
     return (
-      <p className="InputBox-container">
-        <input
-          type="text"
-          value={this.state.value}
-          onChange={(event) => this.onChange(event.target.value)}
-          className="InputBox-input"
-        />
-      </p>
+      <input
+        type="text"
+        value={this.state.value}
+        onChange={(event) => this.onChange(event.target.value)}
+        className={this.props.className}
+      ></input>
     );
   }
 }
