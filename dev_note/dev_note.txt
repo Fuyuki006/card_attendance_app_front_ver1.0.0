@@ -41,3 +41,6 @@ to use an XLSX file or a CSV file when loading data. It looks like I'll need to 
 
 2023/11/10 implementation-accordion-button, I made a provisional implementation of a accordion(foldable) button to manually input roster 
 data. Spent the whole day on FIgma. Any good ideas for roster registration ?
+
+2023/11/11 implementation-manual-modal, I've been wavering about registering members, but I feel it's login-dependent, so for now, I'll 
+work on another section to refresh.
