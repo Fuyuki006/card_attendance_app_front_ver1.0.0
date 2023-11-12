@@ -3,6 +3,7 @@ import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import IndexPage from "./components/pages/IndexPage";
 import TagWallPage from "./components/pages/TagWallPage";
+import Login from "./components/pages/LoginPage";
 import { useAppSelector } from "./store/store";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
               />
             }
           />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
       {/* <h1>Reactの練習</h1>

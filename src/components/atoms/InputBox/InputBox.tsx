@@ -3,6 +3,7 @@ import "./InputBox.scss";
 
 interface InputBoxProps {
   initialText: string;
+  usedLocationName: string;
 }
 
 interface InputBoxState {
@@ -26,14 +27,19 @@ export default class InputBox extends React.Component<
       value: value,
     });
   }
+
+  className = "InputBox-" + this.props.usedLocationName;
+  containerName = this.className + "-container";
+  inputboxName = this.className + "-input";
+
   render() {
     return (
-      <p className="InputBox-container">
+      <p className={this.containerName}>
         <input
           type="text"
           value={this.state.value}
           onChange={(event) => this.onChange(event.target.value)}
-          className="InputBox-input"
+          className={this.inputboxName}
         />
       </p>
     );
