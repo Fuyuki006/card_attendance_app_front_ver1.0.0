@@ -44,3 +44,6 @@ data. Spent the whole day on FIgma. Any good ideas for roster registration ?
 
 2023/11/11 implementation-manual-modal, I've been wavering about registering members, but I feel it's login-dependent, so for now, I'll 
 work on another section to refresh.
+
+2023/11/12 implementation-login-page, In regards to the login Page, I've started on it. I'll put the member registration part on hold for now,
+as it's primarily done through logging in. I'll proceed with implementation while creating the parts that can be designed in Figma.
