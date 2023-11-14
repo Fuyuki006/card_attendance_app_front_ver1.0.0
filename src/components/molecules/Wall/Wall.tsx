@@ -17,7 +17,6 @@ export default class Wall extends React.Component<WallProps> {
     for (let row = 0; row < tagWallRowValue; row++) {
       for (let col = 0; col < tagWallColumnValue; col++) {
         const key = row * tagWallColumnValue + col;
-        console.log(key);
         tags.push(
           <Tag
             key={key.toString()}
