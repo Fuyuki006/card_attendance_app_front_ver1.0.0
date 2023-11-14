@@ -47,3 +47,6 @@ work on another section to refresh.
 
 2023/11/12 implementation-login-page, In regards to the login Page, I've started on it. I'll put the member registration part on hold for now,
 as it's primarily done through logging in. I'll proceed with implementation while creating the parts that can be designed in Figma.
+
+2023/11/13 implementation-login-page, I've implemented the Login button and Login form. Currently, I'm spending time learning Docker and the backend, which is quite
+ challenging.
