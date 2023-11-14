@@ -1,14 +1,13 @@
 .InputBox {
-    writing-mode: vertical-rl;
     &-container {
-        width: 80px;
         
     }
 
     &-input {
-        writing-mode: horizontal-tb; /* テキストの方向を横書きに */
-    width: 30px; /* 適切な幅を設定 */
-    height: 150px; /* 適切な高さを設定 */
+    }
+
+    &-bold {
+        
     }
 
     

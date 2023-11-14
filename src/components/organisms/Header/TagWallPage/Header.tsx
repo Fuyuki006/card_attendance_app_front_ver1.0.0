@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Header.scss";
 import SelectTable from "../../../molecules/SelectTable/SelectTable";
 import { updateRow } from "../../../../store/features/TagWallSlice";
@@ -32,6 +32,11 @@ const customModalStyles = {
   },
 };
 
+const rowMinNum = 0;
+const rowMaxNum = 4;
+const columnMinNum = 0;
+const columnMaxNum = 20;
+
 export default class Header extends React.Component<HeaderProps, HeaderState> {
   constructor(props: HeaderProps) {
     super(props);
@@ -60,14 +65,14 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
       <header className="Header-tagwall">
         <SelectTable
           contentName="縦:"
-          minRangeNum={0}
-          maxRangeNum={4}
+          minRangeNum={rowMinNum}
+          maxRangeNum={rowMaxNum}
           updateStateFunc={updateRow}
         />
         <SelectTable
           contentName="横:"
-          minRangeNum={0}
-          maxRangeNum={20}
+          minRangeNum={columnMinNum}
+          maxRangeNum={columnMaxNum}
           updateStateFunc={updateColumn}
         />
         <nav className="Header-tagwall-registration-container">
@@ -79,7 +84,11 @@ export default class Header extends React.Component<HeaderProps, HeaderState> {
           style={customModalStyles}
           onRequestClose={() => this.closeModal()}
         >
-          <MemberRegistrationModal onClick={this.closeModal} />
+          <MemberRegistrationModal
+            onClick={this.closeModal}
+            rowMaxNum={rowMaxNum}
+            columnMaxNum={columnMaxNum}
+          />
         </Modal>
       </header>
     );
