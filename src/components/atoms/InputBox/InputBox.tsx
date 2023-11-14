@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./InputBox.scss";
 interface InputBoxProps {
+  initialText: string;
+  usedLocationName: string;
+  type: string;
 }
 
 interface InputBoxState {
@@ -17,3 +20,11 @@ const InputBox: React.FC<InputBoxProps> = ({
   const containerName = baseClassName + "-container";
   const inputBoxName = baseClassName + "-input";
 
+  return (
+    <div className={containerName}>
+      <input value={initialText} type={type} className={inputBoxName}></input>
+    </div>
+  );
+};
+
+export default InputBox;
