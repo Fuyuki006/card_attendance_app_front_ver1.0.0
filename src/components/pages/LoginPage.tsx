@@ -1,6 +1,7 @@
 import React from "react";
 import MediaQuery from "react-responsive";
 import Main from "../organisms/Main/LoginPage/Main";
+import Header from "../organisms/Header/LoginPage/Header";
 
 export default class Login extends React.Component {
   render() {
@@ -13,6 +14,7 @@ export default class Login extends React.Component {
         <MediaQuery query="(min-width: 768px)">
           {/* // iPadの横幅を分岐点にしている */}
           <div className="App-allwrapper"></div>
+          <Header />
           <Main />
           {/* <div>ここにPC向けの要素を書く</div> */}
         </MediaQuery>

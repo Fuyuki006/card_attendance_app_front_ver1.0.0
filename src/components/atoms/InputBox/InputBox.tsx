@@ -1,47 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import "./InputBox.scss";
-
 interface InputBoxProps {
   initialText: string;
   usedLocationName: string;
+  type: string;
 }
 
 interface InputBoxState {
   value: string;
 }
 
-export default class InputBox extends React.Component<
-  InputBoxProps,
-  InputBoxState
-> {
-  constructor(props: InputBoxProps) {
-    super(props);
+const InputBox: React.FC<InputBoxProps> = ({
+  initialText,
+  usedLocationName,
+  type,
+}) => {
+  const [inputValue, setinputValue] = useState("");
+  const baseClassName = "InputBox-" + usedLocationName;
+  const containerName = baseClassName + "-container";
+  const inputBoxName = baseClassName + "-input";
 
-    this.state = {
-      value: this.props.initialText,
-    };
-  }
+  const setInputValue = (value: string) => {
+    setinputValue(value);
+  };
 
-  onChange(value: string) {
-    this.setState({
-      value: value,
-    });
-  }
+  return (
+    <div className={containerName}>
+      <input
+        type={type}
+        value={inputValue}
+        onChange={(event) => setInputValue(event.target.value)}
+        className={inputBoxName}
+      />
+    </div>
+  );
+};
 
-  className = "InputBox-" + this.props.usedLocationName;
-  containerName = this.className + "-container";
-  inputboxName = this.className + "-input";
-
-  render() {
-    return (
-      <p className={this.containerName}>
-        <input
-          type="text"
-          value={this.state.value}
-          onChange={(event) => this.onChange(event.target.value)}
-          className={this.inputboxName}
-        />
-      </p>
-    );
-  }
-}
+export default InputBox;
