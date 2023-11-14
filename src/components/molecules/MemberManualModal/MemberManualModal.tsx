@@ -15,16 +15,12 @@ export default class MemberManualModal extends React.Component<MemberManualModal
     for (let row = 0; row < this.props.rowMaxNum; row++) {
       for (let col = 0; col < this.props.columnMaxNum; col++) {
         const key = row * this.props.columnMaxNum + col;
-        inputboxes.push(
-          <InputBox key={key.toString()} className="InputBox-" />
-        );
+        inputboxes.push();
       }
     }
     return (
       <div className="MemberManualModal-container">
-        <div>
-          <InputBox className="InputBox-" />
-        </div>
+        <div></div>
         <div>{inputboxes}</div>
       </div>
     );
