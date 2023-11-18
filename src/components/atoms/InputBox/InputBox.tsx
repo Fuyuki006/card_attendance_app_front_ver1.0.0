@@ -22,7 +22,11 @@ const InputBox: React.FC<InputBoxProps> = ({
 
   return (
     <div className={containerName}>
-      <input value={initialText} type={type} className={inputBoxName}></input>
+      <input
+        defaultValue={initialText}
+        type={type}
+        className={inputBoxName}
+      ></input>
     </div>
   );
 };
