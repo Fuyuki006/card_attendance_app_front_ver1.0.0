@@ -5,6 +5,8 @@ import IndexPage from "./components/pages/IndexPage";
 import TagWallPage from "./components/pages/TagWallPage";
 import Login from "./components/pages/LoginPage";
 import { useAppSelector } from "./store/store";
+import TestPage from "./components/pages/TestPage";
+import Registration from "./components/pages/RegistrationPage";
 
 function App() {
   const tagWallRowValue = useAppSelector(
@@ -29,6 +31,8 @@ function App() {
             }
           />
           <Route path="/login" element={<Login />} />
+          <Route path="/test" element={<TestPage />} />
+          <Route path="/registration" element={<Registration />} />
         </Routes>
       </BrowserRouter>
       {/* <h1>Reactの練習</h1>

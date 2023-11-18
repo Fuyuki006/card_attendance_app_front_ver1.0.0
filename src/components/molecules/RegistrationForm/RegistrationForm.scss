@@ -1,0 +1,15 @@
+.RegistrationForm {
+    &-error-message {
+        display: none;
+    }
+}
+
+label:has(input:invalid)  {
+    .RegistrationForm {
+        &-error-message{
+            margin-top:10px;
+            color: rgba(255,0,0,100);
+            display: block;
+        }
+    }
+ }
