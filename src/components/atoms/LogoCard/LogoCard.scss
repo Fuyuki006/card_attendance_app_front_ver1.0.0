@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+.LogoCard {
+    &-container {
+        position: absolute;
+        width: 65px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 100px;
+    }
+
+    &-firstLetter {
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 12.6px 0px 26px 0px;
+        width: 65px;
+        height: 56px;
+        flex-shrink: 0;
+        background-color: rgba(230, 68, 46, 0.36);
+        border-radius: 12.8px;
+    }
+
+    &-secondLetter {
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 38.6px 65.3px 0px 65.3px;
+        top: 24px;
+        width: 65px;
+        height: 56px;
+        flex-shrink: 0;
+        background-color:rgba(46, 98, 230, 0.36);
+        border-radius: 12.8px;
+    }
+
+    &-thirdLetter {
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 13px 0px 25.6px 130.6px;
+        width: 65px;
+        height: 56px;
+        flex-shrink: 0;
+        background-color: rgba(46, 230, 64, 0.36);
+        border-radius: 12.8px;
+    }
+
+    &-text {
+        position: relative;
+        bottom: 13px;
+        text-align: center;
+        margin-left: 6.7px;
+        width: 52px;
+        height: 65px;
+        flex-shrink: 0;
+        color: #000;
+        font-family: 'Kiwi Maru', serif;
+        font-size: 51.677px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@500&display=swap');
+
+.AppTitle {
+    &-text {
+        position: relative;
+        width: 480px;
+        text-align: right;
+        justify-content: right;
+        display: flex;
+        flex-shrink: 0;
+        color: #000;
+        font-family: 'Kaisei Opti', serif;
+        font-size: 75px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
