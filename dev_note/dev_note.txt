@@ -7,4 +7,50 @@
 2023/10/27 Main & Responsive Design & Content Board, I might have forcefully applied some CSS styles. Should I reapply the CSS styles?
 I have a lot of things I don't know.
 
+<<<<<<< HEAD
 2023/10/29 Content Board style, I had been forcefully setting CSS styles, it's time to relearn. I'll create a new branch and redo the styling.
+=======
+2023/10/29 Content Board style, I had been forcefully setting CSS styles, it's time to relearn. I'll create a new branch and redo the styling.
+
+2023/10/30 update styles, I managed to make some CSS style adjustments for the Header, although it still feels a bit forced. 
+
+2023/10/31 update main style, I think I've been able to apply the style quite well for now. 
+
+2023/11/01 update styles and implement move pages, I've set up the page navigation for now, 
+so should I go ahead and create the next page? I'll also need to make some adjustments to the Index page, 
+but for now, let's focus on creating the next one.
+
+2023/11/02 implementation-board-contents, How can I apply different styles to a single element(such as text) in SCSS while using components? It's difficult.
+
+2023/11/03 implementation-board-contents and organizing-folder-structure, I need to rethink the style of the Index page. I think there are many things
+I don't know technically. I want to create a TagWall page and get to the DB part as soon as possible. It seems like it will take some time.
+
+2023/11/04 implementation-tagwall-page and redux, In parallel with implementating the TagWall page, I introduced Redux. I'm not sure if using 
+Redux for state management is the right choice. or rather, it's a bit challenging. For now, let's give it a try with Redux.
+
+2023/11/05 implementation-tag-and-gridlayout-using-statevalue, Presenting the TagWall section might require some creativity because, when dealing with tags,
+it tends to become vertically long.
+
+2023/11/06 implementation-tagwall-header-style-and-registration-button, I'll start creating a modal for registering names. I'm undecided whether
+to use an XLSX file or a CSV file when loading data. It looks like I'll need to do some research before deciding.
+
+2023/11/07 implementation-member-registration-modal, I feel like the usage of "state" is not very clean because I'm using "constructor"
+ and "useState" separately. Instead of exporting a class, I should have initially exported a function. For now, I'll create a modal.
+
+2023/11/08 implementation-member-registration-modal, Is member addition feature really necessary? I think about UX again.
+
+2023/11/09 change-tag-text-to-inputbox, In the section where I name the tags, I tried switching between Tag Text Edit Mode and Attendance
+ Mode for handling input. Is there any creative way to register names ?
+
+2023/11/10 implementation-accordion-button, I made a provisional implementation of a accordion(foldable) button to manually input roster 
+data. Spent the whole day on FIgma. Any good ideas for roster registration ?
+
+2023/11/11 implementation-manual-modal, I've been wavering about registering members, but I feel it's login-dependent, so for now, I'll 
+work on another section to refresh.
+
+2023/11/12 implementation-login-page, In regards to the login Page, I've started on it. I'll put the member registration part on hold for now,
+as it's primarily done through logging in. I'll proceed with implementation while creating the parts that can be designed in Figma.
+
+2023/11/13 implementation-login-page, I've implemented the Login button and Login form. Currently, I'm spending time learning Docker and the backend, which is quite
+ challenging.
+>>>>>>> main
