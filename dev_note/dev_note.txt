@@ -7,7 +7,6 @@
 2023/10/27 Main & Responsive Design & Content Board, I might have forcefully applied some CSS styles. Should I reapply the CSS styles?
 I have a lot of things I don't know.
 
-<<<<<<< HEAD
 2023/10/29 Content Board style, I had been forcefully setting CSS styles, it's time to relearn. I'll create a new branch and redo the styling.
 =======
 2023/10/29 Content Board style, I had been forcefully setting CSS styles, it's time to relearn. I'll create a new branch and redo the styling.
@@ -53,4 +52,4 @@ as it's primarily done through logging in. I'll proceed with implementation whil
 
 2023/11/13 implementation-login-page, I've implemented the Login button and Login form. Currently, I'm spending time learning Docker and the backend, which is quite
  challenging.
->>>>>>> main
+
