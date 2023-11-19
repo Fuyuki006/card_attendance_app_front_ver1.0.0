@@ -5,6 +5,7 @@ interface SelectBoxProps {
   minRangeNum: number;
   maxRangeNum: number;
   updateStateFunc: Function;
+  contentType: string;
 }
 
 interface SelectBoxState {
@@ -33,6 +34,7 @@ export default class SelectBox extends React.Component<
         initialVal={this.props.minRangeNum}
         selectRange={this.options}
         updateStateFunc={this.props.updateStateFunc}
+        contentType={this.props.contentType}
       />
     );
   }

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-export const tagWallSlice = createSlice({
+export const tagWallSlice:any = createSlice({
     name: "tagWallValue",
     initialState:{
         row:0,

@@ -5,9 +5,8 @@ import IndexPage from "./components/pages/IndexPage";
 import TagWallPage from "./components/pages/TagWallPage";
 import Login from "./components/pages/LoginPage";
 import { useAppSelector } from "./store/store";
-import TestPage from "./components/pages/TestPage";
 import Registration from "./components/pages/RegistrationPage";
-
+import DemoTagWallPage from "./components/pages/DemoTagWallPage";
 function App() {
   const tagWallRowValue = useAppSelector(
     (state: any) => state.tagWallValue.row
@@ -22,6 +21,15 @@ function App() {
         <Routes>
           <Route path="/" element={<IndexPage />} />
           <Route
+            path="/demo"
+            element={
+              <DemoTagWallPage
+                tagWallRowValue={tagWallRowValue}
+                tagWallColumnValue={tagWallColumnValue}
+              />
+            }
+          />
+          <Route
             path="/tagwall"
             element={
               <TagWallPage
@@ -31,23 +39,10 @@ function App() {
             }
           />
           <Route path="/login" element={<Login />} />
-          <Route path="/test" element={<TestPage />} />
           <Route path="/registration" element={<Registration />} />
         </Routes>
       </BrowserRouter>
-      {/* <h1>Reactの練習</h1>
-      <MyPractice
-        initialMessage="ボタンを押してください。"
-        clickedMessage="ボタンが押されました！"
-        buttonLabel="ボタン"
-      />
-      <MyPractice
-        initialMessage="スイッチを押して！"
-        clickedMessage="スイッチが押された！"
-        buttonLabel="スイッチ"
-      /> */}
     </div>
   );
 }
-
 export default App;

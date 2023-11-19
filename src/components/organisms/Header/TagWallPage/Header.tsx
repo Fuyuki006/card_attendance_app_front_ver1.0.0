@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../Header.scss";
 import SelectTable from "../../../molecules/SelectTable/SelectTable";
-import { updateRow } from "../../../../store/features/TagWallSlice";
-import { updateColumn } from "../../../../store/features/TagWallSlice";
+import {
+  updateRow,
+  updateColumn,
+} from "../../../../store/features/TagWallSlice";
 import MemberRegistrationButton from "../../../atoms/MemberRegistrationButton/MemberRegistrationButton";
 import Modal from "react-modal";
 import MemberRegistrationModal from "../../../molecules/MemberRegistrationModal/MemberRegistrationModal";
+import { createClient } from "@supabase/supabase-js";
+import axios from "axios";
 
-interface HeaderProps {}
-
-interface HeaderState {
-  modal: boolean;
+interface TagWallHeaderProps {
+  demo: boolean;
 }
+
 const customModalStyles = {
   content: {
     width: "886px",
@@ -37,60 +40,92 @@ const rowMaxNum = 4;
 const columnMinNum = 0;
 const columnMaxNum = 20;
 
-export default class Header extends React.Component<HeaderProps, HeaderState> {
-  constructor(props: HeaderProps) {
-    super(props);
+const Header = ({ demo }: TagWallHeaderProps) => {
+  const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || "";
+  const supabaseKey = process.env.REACT_APP_SUPABASE_API_KEY || "";
+  const supabase = createClient(supabaseUrl, supabaseKey);
+  const [currentUser, setcurrentUser] = useState("ゲスト");
+  const welcomeUserText = `ようこそ、${currentUser} さん`;
 
-    this.state = {
-      modal: false,
-    };
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-  }
+  const getCurrentUser = async () => {
+    try {
+      const { data } = await supabase.auth.getSession();
+      if (data.session !== null) {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+        const postData = {
+          email: user?.email || "",
+        };
 
-  openModal() {
-    this.setState({
-      modal: true,
-    });
-  }
+        const { data: userNameData } = await axios.post(
+          process.env.REACT_APP_BACK_PATH + "/getUserData",
+          postData
+        );
+        setcurrentUser(userNameData.username || "");
+      }
+    } catch (err) {
+      alert("ユーザーを取得できませんでした");
+    }
+  };
+  const [modalOpen, setModalOpen] = useState(false);
 
-  closeModal() {
-    this.setState({
-      modal: false,
-    });
-  }
+  const openModal = () => {
+    setModalOpen(true);
+  };
 
-  render() {
-    return (
-      <header className="Header-tagwall">
-        <SelectTable
-          contentName="縦:"
-          minRangeNum={rowMinNum}
-          maxRangeNum={rowMaxNum}
-          updateStateFunc={updateRow}
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+  useEffect(() => {
+    if (!demo) {
+      getCurrentUser();
+    }
+  }, []);
+
+  return (
+    <header className="Header-tagwall">
+      <SelectTable
+        contentName="縦"
+        contentType="Row"
+        minRangeNum={rowMinNum}
+        maxRangeNum={rowMaxNum}
+        updateStateFunc={updateRow}
+      />
+      <SelectTable
+        contentName="横"
+        contentType="Column"
+        minRangeNum={columnMinNum}
+        maxRangeNum={columnMaxNum}
+        updateStateFunc={updateColumn}
+      />
+
+      <div className="Header-tagwall-username">{welcomeUserText}</div>
+
+      {demo ? (
+        <div className="Header-tagwall-warning">
+          ※一部機能が制限されています
+        </div>
+      ) : (
+        <></>
+      )}
+      <nav className="Header-tagwall-registration-container">
+        <MemberRegistrationButton onClick={openModal} />
+      </nav>
+      <Modal
+        isOpen={modalOpen}
+        ariaHideApp={false}
+        style={customModalStyles}
+        onRequestClose={closeModal}
+      >
+        <MemberRegistrationModal
+          onClick={closeModal}
+          rowMaxNum={rowMaxNum}
+          columnMaxNum={columnMaxNum}
         />
-        <SelectTable
-          contentName="横:"
-          minRangeNum={columnMinNum}
-          maxRangeNum={columnMaxNum}
-          updateStateFunc={updateColumn}
-        />
-        <nav className="Header-tagwall-registration-container">
-          <MemberRegistrationButton onClick={this.openModal} />
-        </nav>
-        <Modal
-          isOpen={this.state.modal}
-          ariaHideApp={false}
-          style={customModalStyles}
-          onRequestClose={() => this.closeModal()}
-        >
-          <MemberRegistrationModal
-            onClick={this.closeModal}
-            rowMaxNum={rowMaxNum}
-            columnMaxNum={columnMaxNum}
-          />
-        </Modal>
-      </header>
-    );
-  }
-}
+      </Modal>
+    </header>
+  );
+};
+
+export default Header;

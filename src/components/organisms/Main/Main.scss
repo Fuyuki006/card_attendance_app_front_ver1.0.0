@@ -13,5 +13,12 @@
     &-login {
         display: flex;
         justify-content: center;
+        background: rgba(234, 184, 138, 0.41);
     }
+    &-registration {
+        display: flex;
+        justify-content: center;
+        background: rgba(234, 184, 138, 0);
+    }
+
 }

@@ -13,7 +13,7 @@ export default class BoardDescription extends React.Component<BoardDescriptionPr
   boardDescription = this.highlight.map((element, index) => {
     return (
       <span
-        key={element.toString()}
+        key={index.toString()}
         className={classNames(
           element === "true"
             ? "BoardDescription-highlight-text"
