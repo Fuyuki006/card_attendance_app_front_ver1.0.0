@@ -3,7 +3,7 @@ type _Config = {
   }
   
   const Config: _Config = {
-    apiUrl: process.env.REACT_APP_PATH || ""
+    apiUrl: process.env.REACT_APP_BACK_PATH || ""
   }
   
   export default Config

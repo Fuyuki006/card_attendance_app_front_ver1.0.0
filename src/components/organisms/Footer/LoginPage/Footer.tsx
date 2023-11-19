@@ -3,6 +3,6 @@ import "../Footer.scss";
 
 export default class Footer extends React.Component {
   render() {
-    return <footer className="Footer-index"></footer>;
+    return <footer className="Footer-login"></footer>;
   }
 }

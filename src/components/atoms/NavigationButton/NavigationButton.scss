@@ -1,0 +1,33 @@
+.NavigationButton {
+    &-button{
+        &-demo {
+            width: 465px;
+            height: 172px;
+            flex-shrink: 0;
+            border-radius: 100px;
+            border: none;
+            background-color: rgba(249, 170, 227, 0.72);
+            margin: 30px;
+        }
+
+        &-login {
+            width: 465px;
+            height: 172px;
+            flex-shrink: 0;
+            border-radius: 100px;
+            border: none;
+            background-color: rgba(164, 246, 182, 0.72);
+            margin: 30px;
+        }
+    }
+
+    &-text {
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}

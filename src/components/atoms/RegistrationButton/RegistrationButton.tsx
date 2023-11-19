@@ -11,8 +11,8 @@ const RegistrationButton: React.FC<RegistrationButtonProps> = ({
   type,
 }) => {
   return (
-    <button type={type} defaultValue="" className="RegistrationButton-button">
-      {text}
+    <button type={type} className="RegistrationButton-button">
+      <span className="RegistrationButton-text">{text}</span>
     </button>
   );
 };

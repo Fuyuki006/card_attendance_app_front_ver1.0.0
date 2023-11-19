@@ -4,7 +4,7 @@ import MemberCSVButton from "../../atoms/MemberCSVButton/MemberCSVButton";
 import "./MemberManualModal.scss";
 import InputBox from "../../atoms/InputBox/InputBox";
 import Modal from "react-modal";
-
+import DevelopingText from "../../atoms/DevelopingText/Developing";
 interface MemberManualModalProps {
   rowMaxNum: number;
   columnMaxNum: number;
@@ -20,8 +20,8 @@ export default class MemberManualModal extends React.Component<MemberManualModal
     }
     return (
       <div className="MemberManualModal-container">
-        <div></div>
-        <div>{inputboxes}</div>
+        <DevelopingText />
+        {/* <div>{inputboxes}</div> */}
       </div>
     );
   }
