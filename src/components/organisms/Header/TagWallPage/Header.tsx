@@ -62,7 +62,7 @@ const Header = ({ demo }: TagWallHeaderProps) => {
           process.env.REACT_APP_BACK_PATH + "/getUserData",
           postData
         );
-        setcurrentUser(userNameData.username || "");
+        setcurrentUser(userNameData.username);
       }
     } catch (err) {
       alert("ユーザーを取得できませんでした");

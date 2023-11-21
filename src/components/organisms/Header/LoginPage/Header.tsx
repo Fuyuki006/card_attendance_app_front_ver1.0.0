@@ -12,7 +12,7 @@ const Header = () => {
   const getCurrentUser = async () => {
     try {
       const { data, error: getSessionError } = await supabase.auth.getSession();
-
+      console.log("fefwf", data);
       if (data.session !== null) {
         const {
           data: { user },

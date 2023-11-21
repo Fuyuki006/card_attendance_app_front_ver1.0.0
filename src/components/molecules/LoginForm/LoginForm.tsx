@@ -1,11 +1,12 @@
 import React, { FormEventHandler, useState, useEffect } from "react";
 import LoginButton from "../../atoms/LoginButton/LoginButton";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./LoginForm.scss";
 import axios from "axios";
 import { createClient } from "@supabase/supabase-js";
 
 export default function LoginForm() {
+  const navigate = useNavigate();
   const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || "";
   const supabaseKey = process.env.REACT_APP_SUPABASE_API_KEY || "";
   const supabase = createClient(supabaseUrl, supabaseKey);
@@ -29,6 +30,7 @@ export default function LoginForm() {
   };
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault();
     const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || "";
     const supabaseKey = process.env.REACT_APP_SUPABASE_API_KEY || "";
     const supabase = createClient(supabaseUrl, supabaseKey);
@@ -46,15 +48,14 @@ export default function LoginForm() {
         process.env.REACT_APP_BACK_PATH + "/login",
         postData
       );
-      const { data: sessiondata } = await supabase.auth.getSession();
-
-      if (sessiondata.session !== null) {
-        const { data: userdata } = await supabase.auth.getUser();
+      if (data.session !== null) {
+        const { data: userdata } = await supabase.auth.getUser(data);
+        console.log(data);
+        navigate("/tagwall");
+      } else {
+        alert("ログインが失敗しました");
       }
     } catch (error) {
-      e.preventDefault();
-
-      console.error("データのポストに失敗しました。", error);
       alert("ログインが失敗しました");
     }
   };
