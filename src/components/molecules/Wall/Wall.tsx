@@ -26,7 +26,6 @@ const Wall: React.FC<WallProps> = (props) => {
     const supabase = createClient(supabaseUrl, supabaseKey);
     try {
       const { data } = await supabase.auth.getSession();
-      console.log("DATAUSE", data);
       if (data.session !== null) {
         const {
           data: { user },

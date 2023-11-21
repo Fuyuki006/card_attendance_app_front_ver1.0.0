@@ -50,7 +50,7 @@ export default function LoginForm() {
       );
       if (data.session !== null) {
         const { data: userdata } = await supabase.auth.getUser(data);
-        console.log(data);
+
         navigate("/tagwall");
       } else {
         alert("ログインが失敗しました");
