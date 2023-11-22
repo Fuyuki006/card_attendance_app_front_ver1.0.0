@@ -20,7 +20,6 @@ export default function RegistrationForm() {
         password: password,
         email: email,
       };
-      console.log(postData);
       await axios.post(process.env.REACT_APP_BACK_PATH + "/users", postData);
 
       alert("登録完了メールを確認してください");

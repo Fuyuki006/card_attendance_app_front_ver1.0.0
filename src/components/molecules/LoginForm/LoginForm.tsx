@@ -49,9 +49,7 @@ export default function LoginForm() {
         postData
       );
       if (data.session !== null) {
-        // const {g
-        //   data: { session },
-        // } = await supabase.auth.getSession();
+        await supabase.auth.setSession(data.session);
         navigate("/tagwall");
       } else {
         alert("ログインが失敗しました");

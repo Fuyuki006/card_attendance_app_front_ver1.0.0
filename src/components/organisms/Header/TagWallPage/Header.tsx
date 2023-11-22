@@ -10,6 +10,7 @@ import Modal from "react-modal";
 import MemberRegistrationModal from "../../../molecules/MemberRegistrationModal/MemberRegistrationModal";
 import { createClient } from "@supabase/supabase-js";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 interface TagWallHeaderProps {
   demo: boolean;
@@ -41,6 +42,7 @@ const columnMinNum = 0;
 const columnMaxNum = 20;
 
 const Header = ({ demo }: TagWallHeaderProps) => {
+  const location = useLocation();
   const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || "";
   const supabaseKey = process.env.REACT_APP_SUPABASE_API_KEY || "";
   const supabase = createClient(supabaseUrl, supabaseKey);
@@ -50,6 +52,7 @@ const Header = ({ demo }: TagWallHeaderProps) => {
   const getCurrentUser = async () => {
     try {
       const { data } = await supabase.auth.getSession();
+
       if (data.session !== null) {
         const {
           data: { user },
@@ -61,7 +64,6 @@ const Header = ({ demo }: TagWallHeaderProps) => {
           process.env.REACT_APP_BACK_PATH + "/getUserData",
           postData
         );
-        console.log("FERE", data);
         setcurrentUser(data.username);
       }
     } catch (err) {
