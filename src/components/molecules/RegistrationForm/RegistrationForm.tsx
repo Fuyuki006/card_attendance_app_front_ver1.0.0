@@ -19,9 +19,8 @@ export default function RegistrationForm() {
         username: username,
         password: password,
         email: email,
-        logged_in: false,
       };
-
+      console.log(postData);
       await axios.post(process.env.REACT_APP_BACK_PATH + "/users", postData);
 
       alert("登録完了メールを確認してください");
