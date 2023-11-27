@@ -58,3 +58,5 @@ between the development and production environments. I didn't have time to write
 I plan to work at my own pace. 
 
 2023/11/25 I was working on a new design in Figma. I need to think about what else is necessary.
+
+2023/11/27 I started creating the menu button. Still a lot to do.
