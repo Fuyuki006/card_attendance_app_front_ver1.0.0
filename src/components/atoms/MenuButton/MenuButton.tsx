@@ -9,7 +9,14 @@ export default class MenuButton extends React.Component<MenuButtonProps> {
   render() {
     return (
       <button onClick={this.props.onClick} className="MenuButton-button">
-        <span className="MenuButton-text">Menu</span>
+        <div className="MenuButton-container">
+          <div className="MenuButton-text">Menu</div>
+          <img
+            src="./images/wooden-board.png"
+            alt="WoodenBoardImage"
+            className="MenuButton-image"
+          />
+        </div>
       </button>
     );
   }
