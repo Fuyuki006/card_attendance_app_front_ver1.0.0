@@ -6,6 +6,7 @@ import {
   updateColumn,
 } from "../../../../store/features/TagWallSlice";
 import MemberRegistrationButton from "../../../atoms/MemberRegistrationButton/MemberRegistrationButton";
+import MenuButton from "../../../atoms/MenuButton/MenuButton";
 import Modal from "react-modal";
 import MemberRegistrationModal from "../../../molecules/MemberRegistrationModal/MemberRegistrationModal";
 import { createClient } from "@supabase/supabase-js";
@@ -110,6 +111,7 @@ const Header = ({ demo }: TagWallHeaderProps) => {
       )}
       <nav className="Header-tagwall-registration-container">
         <MemberRegistrationButton onClick={openModal} />
+        <MenuButton onClick={() => {}} />
       </nav>
       <Modal
         isOpen={modalOpen}
