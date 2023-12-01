@@ -7,6 +7,9 @@ import Login from "./components/pages/LoginPage";
 import { useAppSelector } from "./store/store";
 import Registration from "./components/pages/RegistrationPage";
 import DemoTagWallPage from "./components/pages/DemoTagWallPage";
+
+import ChainTest from "./components/pages/ChainTest";
+
 function App() {
   const tagWallRowValue = useAppSelector(
     (state: any) => state.tagWallValue.row
@@ -39,6 +42,7 @@ function App() {
             }
           />
           <Route path="/login" element={<Login />} />
+          <Route path="/chain" element={<ChainTest />} />
           <Route path="/registration" element={<Registration />} />
         </Routes>
       </BrowserRouter>

@@ -1,0 +1,32 @@
+.Chain {
+  
+  
+  &-chain {
+    height:20px;
+    width: 2000px;
+    background:
+    radial-gradient(10px 10px at 50% 0%,#66666600 46%,#666666 50%,#dddddd 73%,#666666 96%,#66666600 100%) 11px 10px/22px 20px
+    ,radial-gradient(10px 10px,#66666600 46%,#666666 50%,#eeeeee 73%,#666666 96%,#66666600 100%) 0px 0px/22px 20px
+    ,radial-gradient(10px 10px at 50% 100%,#66666600 46%,#666666 50%,#dddddd 73%,#666666 96%,#66666600 100%) 11px 10px/22px 20px
+    ;
+    position: absolute;
+    left: 20%;
+    transform: rotate(90deg); /* 90度回転 */
+    animation: sway 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes sway {
+    0% {
+      transform: rotate(90deg) translateY(-10px); /* 開始時の状態 */
+    }
+    100% {
+      transform: rotate(90deg) translateY(10px); /* 終了時の状態 */
+    }
+  }
+
+  .Chain-chain.width-1000 {
+    width: 2000px;
+    animation: sway 2s ease-in-out infinite alternate;
+  }
+  
+}
