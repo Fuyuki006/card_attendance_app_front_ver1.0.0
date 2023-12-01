@@ -62,3 +62,6 @@ I plan to work at my own pace.
 2023/11/27 I started creating the menu button. Still a lot to do.
 
 2023/11/28 I was working on a new design in Figma. 
+
+2023/12/01 I implemented chain animation. There is still a lot more to do.
+ 
