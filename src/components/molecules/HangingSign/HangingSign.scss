@@ -1,0 +1,27 @@
+.HangingSign {
+    &-container {
+        position: absolute;
+        justify-content: center;
+      }
+      &-chains {
+        display: flex;
+      }
+      &-leftChain,
+      &-rightChain {
+        justify-content: center;
+      }
+    
+      &-leftChain {
+        position: relative;
+        left: 40%;
+      }
+    
+      &-rightChain {
+        position: relative;
+        right: 10%;
+      }
+    
+      &-sign {
+      }
+  }
+  

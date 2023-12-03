@@ -1,8 +1,7 @@
 import React from "react";
-import Chain from "./Chain";
 import "./Chain.scss";
 
-const ChainContainer: React.FC = () => {
+const Chain: React.FC = () => {
   // 10回繰り返すための配列を生成
   const chainElements = Array.from({ length: 100 }).map((_, index) => (
     <div
@@ -20,4 +19,4 @@ const ChainContainer: React.FC = () => {
   );
 };
 
-export default ChainContainer;
+export default Chain;

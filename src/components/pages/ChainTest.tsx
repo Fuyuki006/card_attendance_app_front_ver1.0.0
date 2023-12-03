@@ -1,6 +1,7 @@
 import React from "react";
 import MediaQuery from "react-responsive";
 import Chain from "../atoms/Chain/Chain";
+import HangingSign from "../molecules/HangingSign/HangingSign";
 
 export default class ChainTest extends React.Component {
   render() {
@@ -13,7 +14,7 @@ export default class ChainTest extends React.Component {
         <MediaQuery query="(min-width: 768px)">
           {/* // iPadの横幅を分岐点にしている */}
           <div className="App-allwrapper"></div>
-          <Chain />
+          <HangingSign text="アカウント" />
           {/* <div>ここにPC向けの要素を書く</div> */}
         </MediaQuery>
       </div>
