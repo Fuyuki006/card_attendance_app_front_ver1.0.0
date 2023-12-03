@@ -67,3 +67,6 @@ I plan to work at my own pace.
 
 2023/12/02 I splited the chain and move it extensively. I didn't know I could use loops in SCSS. Well, it was a good discovery, 
  so let's leverage it.
+
+2023/12/03 I created a hanging sign, but I realize I need a better understanding of CSS. I need to study more and explore various techniques
+ to improve my skills.
