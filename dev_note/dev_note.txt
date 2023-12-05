@@ -70,3 +70,5 @@ I plan to work at my own pace.
 
 2023/12/03 I created a hanging sign, but I realize I need a better understanding of CSS. I need to study more and explore various techniques
  to improve my skills.
+
+2023/12/05 I created a hanging sign, I started to doubt whether this is really necessary. Perhaps it's a flaw in the design process.
