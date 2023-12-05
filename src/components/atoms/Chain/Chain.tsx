@@ -3,7 +3,7 @@ import "./Chain.scss";
 
 const Chain: React.FC = () => {
   // 10回繰り返すための配列を生成
-  const chainElements = Array.from({ length: 100 }).map((_, index) => (
+  const chainElements = Array.from({ length: 20 }).map((_, index) => (
     <div
       className="Chain-chain"
       key={index.toString()}
