@@ -72,3 +72,5 @@ I plan to work at my own pace.
  to improve my skills.
 
 2023/12/05 I created a hanging sign, I started to doubt whether this is really necessary. Perhaps it's a flaw in the design process.
+
+2023/12/07 I created a hanging sign, I implemented a pendulum-like animation.
