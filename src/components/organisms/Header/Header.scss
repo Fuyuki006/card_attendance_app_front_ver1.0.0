@@ -60,6 +60,11 @@
             text-overflow: ellipsis; /* はみ出た部分を省略記号で表示 */
         
         }
+        &-hanging-sign {
+            left: 20%;
+            top:0;
+            position: absolute;
+        }
 
  }
 
