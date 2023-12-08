@@ -74,3 +74,5 @@ I plan to work at my own pace.
 2023/12/05 I created a hanging sign, I started to doubt whether this is really necessary. Perhaps it's a flaw in the design process.
 
 2023/12/07 I created a hanging sign, I implemented a pendulum-like animation.
+
+2023/12/08 I was working on a new design in Figma. 
