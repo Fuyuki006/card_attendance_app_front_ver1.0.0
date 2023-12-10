@@ -3,7 +3,7 @@
         position: relative;
         top: 0;
         margin: 0;
-        animation: sway 2s ease-in-out infinite alternate;
+        animation: sway 4s ease-in-out;
     }
     
     
@@ -25,10 +25,45 @@
     }
     @keyframes sway {
         0% {
-          transform:translateX(120px);
-        }
-        100% {
-          transform:translateX(-120px);
-        }
+            transform:translateX(76px);
+            }
+            
+          10% {
+            transform:translateX(-76px);
+            }
+  
+          20% {
+              transform:translateX(57px);
+            }
+
+          30% {
+              transform:translateX(-57px);
+            }
+
+          40% {
+              transform:translateX(38px);
+            }
+  
+          50% {
+              transform:translateX(-38px);
+            }
+  
+          60% {
+              transform:translateX(19px);
+            }
+  
+          70% {
+              transform:translateX(-19px);
+            }
+  
+          80% {
+              transform:translateX(0px);
+            }
+  
+          100% {
+              transform:translateX(0px);
+            }
+        
+
       }
 }
