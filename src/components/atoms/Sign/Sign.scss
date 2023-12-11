@@ -1,9 +1,12 @@
 .Sign {
+    $chainNum:10;
     &-container {
         position: relative;
         top: 0;
         margin: 0;
         animation: sway 4s ease-in-out;
+        border: none;
+        background-color: #FFF;
     }
     
     
@@ -25,35 +28,35 @@
     }
     @keyframes sway {
         0% {
-            transform:translateX(76px);
+            transform:translateX($chainNum*4px);
             }
             
           10% {
-            transform:translateX(-76px);
+            transform:translateX(-$chainNum*4px);
             }
   
           20% {
-              transform:translateX(57px);
+              transform:translateX($chainNum*3px);
             }
 
           30% {
-              transform:translateX(-57px);
+              transform:translateX(-$chainNum*3px);
             }
 
           40% {
-              transform:translateX(38px);
+              transform:translateX($chainNum*2px);
             }
   
           50% {
-              transform:translateX(-38px);
+              transform:translateX(-$chainNum*2px);
             }
   
           60% {
-              transform:translateX(19px);
+              transform:translateX($chainNum*1px);
             }
   
           70% {
-              transform:translateX(-19px);
+              transform:translateX(-$chainNum*1px);
             }
   
           80% {
@@ -63,7 +66,5 @@
           100% {
               transform:translateX(0px);
             }
-        
-
       }
 }
