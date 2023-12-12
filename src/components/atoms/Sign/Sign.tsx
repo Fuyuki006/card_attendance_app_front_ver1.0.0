@@ -6,10 +6,10 @@ interface SignProps {
 }
 const Sign: React.FC<SignProps> = ({ text }) => {
   return (
-    <div className="Sign-container">
+    <button className="Sign-container">
       <span className="Sign-text">{text}</span>
       <img src="./images/sign.png" alt="SignImage" className="Sign-image" />
-    </div>
+    </button>
   );
 };
 
