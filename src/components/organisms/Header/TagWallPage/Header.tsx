@@ -12,7 +12,7 @@ import MemberRegistrationModal from "../../../molecules/MemberRegistrationModal/
 import { createClient } from "@supabase/supabase-js";
 import axios from "axios";
 import HangingSign from "../../../molecules/HangingSign/HangingSign";
-import Menu from "../../../molecules/Menu/Menu";
+import MenuModal from "../../../molecules/MenuModal/MenuModal";
 
 interface TagWallHeaderProps {
   demo: boolean;
@@ -115,9 +115,14 @@ const Header = ({ demo }: TagWallHeaderProps) => {
         <MemberRegistrationButton onClick={openModal} />
         <MenuButton onClick={() => {}} />
       </nav>
-      <div className="Header-tagwall-hanging-sign">
-        <Menu />
-      </div>
+      <Modal
+        isOpen={modalOpen}
+        ariaHideApp={false}
+        style={customModalStyles}
+        onRequestClose={closeModal}
+      >
+        <MenuModal onClick={closeModal} />
+      </Modal>
       <Modal
         isOpen={modalOpen}
         ariaHideApp={false}
