@@ -1,4 +1,4 @@
-#card_attendance_app_front_ver1.0.0
+# card_attendance_app_front_ver1.0.0
 
 ## プレビュー
 
