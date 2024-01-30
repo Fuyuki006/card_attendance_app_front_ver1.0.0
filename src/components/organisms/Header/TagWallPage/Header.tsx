@@ -50,19 +50,19 @@ const Header = ({ demo }: TagWallHeaderProps) => {
   const getCurrentUser = async () => {
     try {
       const { data } = await supabase.auth.getSession();
+
       if (data.session !== null) {
         const {
           data: { user },
         } = await supabase.auth.getUser();
         const postData = {
-          email: user?.email || "",
+          email: user?.email,
         };
-
-        const { data: userNameData } = await axios.post(
+        const { data } = await axios.post(
           process.env.REACT_APP_BACK_PATH + "/getUserData",
           postData
         );
-        setcurrentUser(userNameData.username || "");
+        setcurrentUser(data.username);
       }
     } catch (err) {
       alert("ユーザーを取得できませんでした");
@@ -77,10 +77,9 @@ const Header = ({ demo }: TagWallHeaderProps) => {
   const closeModal = () => {
     setModalOpen(false);
   };
+
   useEffect(() => {
-    if (!demo) {
-      getCurrentUser();
-    }
+    getCurrentUser();
   }, []);
 
   return (

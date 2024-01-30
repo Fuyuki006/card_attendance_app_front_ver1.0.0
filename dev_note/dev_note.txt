@@ -8,7 +8,7 @@
 I have a lot of things I don't know.
 
 2023/10/29 Content Board style, I had been forcefully setting CSS styles, it's time to relearn. I'll create a new branch and redo the styling.
-=======
+
 2023/10/29 Content Board style, I had been forcefully setting CSS styles, it's time to relearn. I'll create a new branch and redo the styling.
 
 2023/10/30 update styles, I managed to make some CSS style adjustments for the Header, although it still feels a bit forced. 
@@ -53,3 +53,32 @@ as it's primarily done through logging in. I'll proceed with implementation whil
 2023/11/13 implementation-login-page, I've implemented the Login button and Login form. Currently, I'm spending time learning Docker and the backend, which is quite
  challenging.
 
+2023/11/14 ~ 2023/11/23 I've been working on the dev environment during this period. It was challenging to study and bridge the gap 
+between the development and production environments. I didn't have time to write dev_note, and there were many hotfixes. From now on, 
+I plan to work at my own pace. 
+
+2023/11/25 I was working on a new design in Figma. I need to think about what else is necessary.
+
+2023/11/27 I started creating the menu button. Still a lot to do.
+
+2023/11/28 I was working on a new design in Figma. 
+
+2023/12/01 I implemented chain animation. There is still a lot more to do.
+
+2023/12/02 I splited the chain and move it extensively. I didn't know I could use loops in SCSS. Well, it was a good discovery, 
+ so let's leverage it.
+
+2023/12/03 I created a hanging sign, but I realize I need a better understanding of CSS. I need to study more and explore various techniques
+ to improve my skills.
+
+2023/12/05 I created a hanging sign, I started to doubt whether this is really necessary. Perhaps it's a flaw in the design process.
+
+2023/12/07 I created a hanging sign, I implemented a pendulum-like animation.
+
+2023/12/08 I was working on a new design in Figma. 
+
+2023/12/11 I implemented the menu feature. Hmm, I haven't made much progress; I need to work more dilligently on it.
+
+2023/12/13 I was working on a new design in Figma. 
+
+2023/12/14 I implemented menu modal !
