@@ -3,6 +3,7 @@ import Main from "../organisms/Main/IndexPage/Main";
 import Header from "../organisms/Header/IndexPage/Header";
 import MediaQuery from "react-responsive";
 import Footer from "../organisms/Footer/IndexPage/Footer";
+import "./IndexPage.scss";
 
 export default class Index extends React.Component {
   render() {
