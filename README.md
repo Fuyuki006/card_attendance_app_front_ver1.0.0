@@ -16,5 +16,6 @@
 ![demo3](https://github.com/Fuyuki006/card_attendance_app_front_ver1.0.0/assets/125243602/804b0008-600b-4a76-ae47-e69cbb20d324)
 
 #### ログイン後
+![demo4](https://github.com/Fuyuki006/card_attendance_app_front_ver1.0.0/assets/125243602/f58d0fff-24fb-4678-a8c1-4f057bd475e6)
 
 
