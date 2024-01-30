@@ -3,6 +3,12 @@
 ## プレビュー
 
 ### images
+#### ホーム画面
+<div display="flex">
+  <p align="center">
+    <img width="40%" src="https://github.com/Fuyuki006/card_attendance_app_front_ver1.0.0/assets/125243602/90d711f7-b61b-4f12-aa7f-a6f352dd4953">
+  </p>
+</div>
 
 ### gifs
 
